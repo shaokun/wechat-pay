@@ -1,4 +1,4 @@
-# Wechatpay
+# Wechatpay/微信支付
 
 A gem to deal with Wechatpay. The Wechatpay official document can be found [here](http://mch.weixin.qq.com/wiki/doc/api/index.html). You will receive the backend document when you get the Wechatpay access.
 
