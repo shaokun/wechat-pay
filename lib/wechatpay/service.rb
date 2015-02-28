@@ -15,9 +15,9 @@ module Wechatpay
         body = Wechatpay::Utils.add_sign_and_generate_xml_body(options)
         response = HTTParty.post(
           Wechatpay::Config::UNIFIED_ORDER_URL,
-          :body => body
+          body: body
         )
-        result = Hash.from_xml(response.body)["xml"]
+        result = Hash.from_xml(response.body)['xml']
         if Wechatpay::Sign.valid?(result)
           result
         else
@@ -31,7 +31,7 @@ module Wechatpay
           timeStamp: Wechatpay::Utils.timestamp,
           nonceStr: Wechatpay::Utils.nonce_str,
           package: "prepay_id=#{prepay_id}",
-          signType: "MD5"
+          signType: 'MD5'
         }
         options[:paySign] = Wechatpay::Sign.md5(options)
         options.delete :appId

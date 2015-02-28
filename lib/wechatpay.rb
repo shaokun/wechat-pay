@@ -1,12 +1,10 @@
-require "wechatpay/version"
-require "wechatpay/sign"
-require "wechatpay/utils"
-require "wechatpay/service"
+require 'wechatpay/version'
+require 'wechatpay/sign'
+require 'wechatpay/utils'
+require 'wechatpay/service'
 
 module Wechatpay
-
   class Config
-
     UNIFIED_ORDER_URL = 'https://api.mch.weixin.qq.com/pay/unifiedorder'
 
     class << self
@@ -20,5 +18,4 @@ module Wechatpay
       yield Config if block_given?
     end
   end
-
 end

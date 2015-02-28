@@ -21,7 +21,7 @@ module Wechatpay
           hash.each do |k, v|
             str << "<#{k}>#{v}</#{k}>\n"
           end
-          str << "</xml>"
+          str << '</xml>'
         end
       end
 
@@ -37,7 +37,7 @@ module Wechatpay
         if hash.is_a? Hash
           yield hash
         else
-          raise ArgumentError
+          fail ArgumentError
         end
       end
 
